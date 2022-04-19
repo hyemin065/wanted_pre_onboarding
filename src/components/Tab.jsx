@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 const TabArea = styled.ul`
   width: 500px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: space-around;
   border-bottom: 2px solid #ddd;

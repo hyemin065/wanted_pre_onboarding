@@ -12,7 +12,7 @@ const ToggleArea = styled.div`
   border-radius: 30px;
   position: relative;
   cursor: pointer;
-  margin: 30px;
+  margin: 30px 30px 100px;
 
   span {
     z-index: 999;

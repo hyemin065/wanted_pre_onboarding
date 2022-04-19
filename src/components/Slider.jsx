@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const SliderArea = styled.div`
   width: 400px;
+  margin-bottom: 100px;
 `;
 
 const RangeDiv = styled.div`

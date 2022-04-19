@@ -5,6 +5,7 @@ import { faCircleCheck, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-ic
 
 const InputArea = styled.div`
   width: 400px;
+  margin-bottom: 100px;
 `;
 
 const FormGroup = styled.div`

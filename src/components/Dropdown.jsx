@@ -6,6 +6,7 @@ import { faCaretDown, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icon
 const DropdownArea = styled.div`
   width: 300px;
   height: 300px;
+  margin-bottom: 100px;
 `;
 
 const DropdownButton = styled.div`
