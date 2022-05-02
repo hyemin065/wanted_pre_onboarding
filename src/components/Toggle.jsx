@@ -41,7 +41,7 @@ const Toggle = () => {
 
   //toggle 상태변경
   const toggleHandler = () => {
-    setToggleState(!toggleState);
+    setToggleState((prev) => !prev);
   };
 
   return (

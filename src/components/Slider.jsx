@@ -106,7 +106,7 @@ const Slider = () => {
           {percentRange.map((item, index) => {
             return (
               <span
-                key={index}
+                key={`range-${index}`}
                 style={{
                   left: `calc(${item}% - 1%)`,
                   backgroundColor: `${rangeValue < item ? 'rgba(223, 212, 243, 1)' : 'blueviolet'}`,
@@ -124,11 +124,11 @@ const Slider = () => {
         />
       </RangeBar>
       <ButtonDiv>
-        {percentRange.map((item) => {
+        {percentRange.map((item, index) => {
           return (
             <Button
               type="button"
-              key={item}
+              key={`percent-${index}`}
               onClick={() => clickValueHandler(item)}>{`${item}%`}</Button>
           );
         })}

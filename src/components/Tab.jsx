@@ -40,16 +40,18 @@ const Tab = () => {
   const [tabInitialData, setTabInitialData] = useState('감자');
 
   //tab 클릭시
-  const clickHandler = (e) => {
-    const value = e.target.innerText;
-    setTabInitialData(value);
+  const clickHandler = (selectTab) => {
+    setTabInitialData(selectTab);
   };
 
   return (
     <TabArea tab={tabInitialData}>
       {tabData.map((data, index) => {
         return (
-          <li key={index} onClick={clickHandler} className={tabInitialData === data ? 'on' : ''}>
+          <li
+            key={`tab-${index}`}
+            onClick={() => clickHandler(data)}
+            className={tabInitialData === data ? 'on' : ''}>
             {data}
           </li>
         );

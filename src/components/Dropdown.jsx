@@ -88,9 +88,8 @@ const Dropdown = () => {
     setSearchValue('');
   };
 
-  const changeItemHandler = (e) => {
-    const value = e.target.innerText;
-    setDropdownInitialItem(value);
+  const changeItemHandler = (selectItem) => {
+    setDropdownInitialItem(selectItem);
     setDropdownState(false);
     setSearchValue('');
   };
@@ -142,7 +141,7 @@ const Dropdown = () => {
           <ContentsUl>
             {dropdownItemList.map((item, index) => {
               return (
-                <li key={index} onClick={changeItemHandler}>
+                <li key={`item-${index}`} onClick={() => changeItemHandler(item)}>
                   {item}
                 </li>
               );
