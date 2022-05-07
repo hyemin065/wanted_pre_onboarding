@@ -1,0 +1,85 @@
+@use '../../styles//constants/colors';
+@use '../../styles//mixins/flexbox';
+@use '../../styles/mixins/position';
+
+.sliderArea {
+  width: 400px;
+  margin-bottom: 100px;
+}
+
+.range {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: colors.$GRAYE;
+  border: 1px solid colors.$GRAYD;
+  border-radius: 5px;
+
+  p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.rangeBar {
+  position: relative;
+  width: 100%;
+
+  div {
+    position: relative;
+    width: 97%;
+    height: 5px;
+    background-color: rgb(223, 212, 243);
+  }
+
+  span {
+    @include position.absolute(50% auto auto auto);
+    width: 16px;
+    height: 16px;
+    border-radius: 30px;
+    transform: translate(0, -50%);
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 5px;
+    margin: 0;
+    margin-right: 15px;
+    background-color: blueviolet;
+    background-image: linear-gradient(blueviolet, blueviolet);
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-thumb {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      background: blueviolet;
+      border: 3px solid colors.$WHITE;
+      border-radius: 50%;
+      box-shadow: 0 0 2px 0 colors.$GRAY6;
+      transition: background 0.3s ease-in-out;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.buttonArea {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+
+  button {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    font-size: 10px;
+    color: colors.$GRAY6;
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+  }
+}
